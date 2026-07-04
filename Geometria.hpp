@@ -147,7 +147,7 @@ public:
     Mivector operator-(const Mivector& otro) const {
         Mivector resultado;
         // usados[j] indica si el elemento j de otro ya fue emparejado
-        bool usados[500] = {false};
+        std::vector<bool> usados(otro.tamano, false);
         for (int i = 0; i < tamano; i++) {
             bool encontrado = false;
             for (int j = 0; j < otro.tamano && !encontrado; j++) {
